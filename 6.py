@@ -33,7 +33,7 @@ with sync_playwright() as p:
     # ---- 下載圖片並存檔 ----
     if img_src:
         img_data = requests.get(img_src).content
-        with open("typhoon_track.png", "wb") as f:
+        with open("backup/typhoon_track.png", "wb") as f:
             f.write(img_data)
         print("✅ 圖片已儲存成 typhoon_track.png")
 
