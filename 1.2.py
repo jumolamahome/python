@@ -177,7 +177,7 @@ with sync_playwright() as p:
         log("⚠ 仍未成功點擊『洛杉磯』，可能在隱藏分頁/滾動容器/跨網域 iframe，或需先觸發其他 UI")
 
     # 観察一下結果（正式自動化可改為等待條件，如 URL 或欄位值變更）
-    page.wait_for_timeout(2000)
+    page.wait_for_timeout(20000)
     log("關閉瀏覽器")
     browser.close()
     log("流程結束")
