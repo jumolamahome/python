@@ -4,7 +4,7 @@
 1) 進入 https://packages.eztravel.com.tw/
 2) 點選熱門目的地「洛杉磯」
 3) 設定出發日：2025/09/01 (一)
-   設定回國日：2025/10/01 (三)
+   設定回國日：2025/09/12 (五)
 
 特色：
 - 全程 print log，方便追蹤
@@ -258,7 +258,7 @@ if __name__ == "__main__":
 
         # === 設定日期 ===
         dep_value = "2025/09/01 (一)"
-        ret_value = "2025/10/01 (三)"
+        ret_value = "2025/09/12 (五)"
 
         ok_dep = set_date_in_contexts(page, which="start", value=dep_value, label="出發日")
         ok_ret = set_date_in_contexts(page, which="end",   value=ret_value, label="回國日")
@@ -269,6 +269,6 @@ if __name__ == "__main__":
             log("⚠ 還是找不到/設不進日期；可能該頁是列表頁或日期在另一個分頁/表單或 Shadow DOM 中")
 
         # 保留時間觀察結果
-        page.wait_for_timeout(5000)
+        page.wait_for_timeout(50000)
         browser.close()
         log("流程結束")
